@@ -1,0 +1,83 @@
+.text-div {
+    margin: 265px auto;
+    text-align: center;
+    z-index: 99;
+    width: 80%;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+
+.text-div h1 {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cart_container {
+    margin-top: 140px !important;
+}
+
+.shoppint-items-title {
+    color: #000;
+    font-weight: bold;
+    font-family: Verdana;
+}
+
+.row-box {
+    background-color: #fff !important;
+    margin: 0 auto;
+    display: flex;
+}
+
+.detail-info-2 {
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #cfcbcb;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.img-box-2 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+.product-detail-2 {
+    margin-left: 20px;
+    position: relative;
+}
+
+.product-detail-2 h2 {
+    color: black;
+    font-weight: 200;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    width: 100% !important;
+}
+
+.item-amount-btn {
+    border-radius: 5px;
+}
+
+.item_price-2 {
+    margin-top: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 400px;
+    position: relative;
+    top: -40px;
+}
+
+.des-2 {
+    font-size: 15px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 100px;
+}

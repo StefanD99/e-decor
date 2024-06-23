@@ -1,0 +1,137 @@
+.home-link {
+    text-decoration: none;
+    font-size: 19px;
+    position: absolute;
+    left: 90px;
+    top: 110px;
+    overflow: hidden;
+}
+
+.categories-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 85px;
+}
+
+.categories-container-opacity {
+    opacity: 0.5;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+    color: black;
+    text-underline-offset: 3px;
+    background: none !important;
+}
+
+.home-link::before {
+    content: "<";
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.btn-categories {
+    width: 9%;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+
+.btn-categories:hover {
+    color: black !important;
+    border: 2px solid black !important;
+    padding: 1px !important;
+}
+
+.btn-categories:active {
+    transform: scale(0.98);
+    color: black !important;
+    border: 2px solid black !important;
+}
+
+.btn-all {
+    width: 5%;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .btn-categories {
+        width: fit-content;
+    }
+    .btn-all {
+        width: 40px;
+    }
+    .card {
+        width: fit-content;
+        position: relative;
+        right: 40px;
+    }
+   .price {
+    text-align: center;
+   }
+}
+
+@media screen and (max-width: 775px) {
+    .btns-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-link {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+    }
+    .btns-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px auto !important;
+    }
+    .btn-categories {
+        width: 90px;
+        margin-top: 20px;
+    }
+    .btn-all {
+        width: 40px;
+    }
+    .btn-categories:nth-child(5) {
+        margin-left: 90px;
+    }
+    .btn-categories:nth-child(5), .btn-categories:nth-child(6), .btn-categories:nth-child(7) {
+        margin-top: 15px;
+        position: relative;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .filter-container {
+        margin-right: 20px;
+    }
+    .btns-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-categories {
+        font-size: 15px;
+        width: fit-content;
+    }
+    .btn-categories:nth-child(4), .btn-categories:nth-child(5), .btn-categories:nth-child(6), .btn-categories:nth-child(7) {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .filter-container {
+        margin: 0;
+    }
+}

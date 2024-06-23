@@ -1,0 +1,106 @@
+.warning {
+  height: 40px;
+  width: 300px;
+  position: fixed;
+  right: 0;
+  top: 12%;
+  background-color: rgb(210, 91, 91);
+  font-size: 1.1rem;
+  color: white;
+  font-family: cursive;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    max-width: 320px;
+    margin-bottom: 30px;
+    margin-left: 130px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+    right: 65px;
+    border: 1px solid black;
+  }
+
+.card h2 {
+  color: black;
+}
+
+  .product-image {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+  }
+
+  .product-image:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    border: 1px solid #000;
+  }
+
+  .price {
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    position: relative;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .card button:active {
+    opacity: 0.6;
+  }
+  
+  @media screen and (max-width: 991px) {
+    .zoom-image {
+      width: 500px;
+    }
+  }
+  
+  @media screen and (max-width: 575px) {
+    .zoom-image {
+      width: 560px;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .zoom-image {
+      width: 410px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .zoom-image {
+      width: 360px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .zoom-image {
+      width: 305px;
+    }
+  }

@@ -1,0 +1,53 @@
+.custom-container {
+    font-family: Verdana;
+    font-weight: bold;
+}
+
+.form {
+    background-color: white
+}
+
+.row-form {
+    background-color: rgba(224, 224, 224, 0.74);
+    border: 1px solid rgba(214, 211, 211, 0.788);
+    border-radius: 10px;
+}
+
+.form-input {
+    font-weight: bold;
+    font-style: italic;
+    border: 1px solid rgba(73, 72, 72, 0.562);
+}
+
+.btn-form {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #000 !important;
+    border: #000;
+}
+
+.btn:active {
+    color: white !important;
+    background-color: #000 !important;
+    opacity: 0.7;
+}
