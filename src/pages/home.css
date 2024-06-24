@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin-top: 85px;
+    margin-top: 110px;
     z-index: 999;
 }
 
@@ -515,6 +515,12 @@
   }
 }
 
+@media screen and (max-width: 425px) {
+  .button-cta {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 410px) {
   .button-cta {
     font-size: 13px;
@@ -538,8 +544,20 @@
   }
 }
 
+@media screen and (max-width: 375px) {
+  .button-cta {
+    font-size: 11px;
+  }
+}
+
 @media screen and (max-width: 360px) {
   .right-side-wrapper {
     left: -70px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .button-cta {
+    font-size: 9px;
   }
 }
