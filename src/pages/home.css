@@ -160,10 +160,10 @@
 }
 
 .carousel-item {
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
-.carousel-item img {
-  transition: transform 0.5s ease-in-out;
+.slide {
+  width: 240px;
 }
 .carousel-control-prev-icon, .carousel-control-next-icon {
   position: relative;

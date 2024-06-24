@@ -29,7 +29,7 @@ function Bought({isBought, cart, setCart, size}) {
             ? 
                 <Container className='mt-5 custom-container cart_container'>
                     <h1 className="text-center mb-4 shoppint-items-title">Your Shopping Items</h1>
-                    <Row className="justify-content-md-center row-form row-box">
+                    <Row className="row-form row-box">
                         <Col md={7} className="mb-4 col-item">
                             {
                                 cart?.map((item) => {
@@ -41,7 +41,7 @@ function Bought({isBought, cart, setCart, size}) {
                                         </div>
                                         <div className="product-detail-2">
                                           <h2>{item.name}</h2>
-                                          Quantity: <button className='amount-btn item-amount-btn'>{item.amount}</button>
+                                          <span>Quantity:</span> <span><button className='amount-btn item-amount-btn'>{item.amount}</button></span>
                                           <p className='item_price-2'>{item.price + '$'}</p>
                                           <p className='des-2'>{item.des}</p>
                                         </div>

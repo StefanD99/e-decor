@@ -34,7 +34,7 @@ function ProductPage({handleClick, warning, press, detail, detailPage, showCongr
                 return (
                   <React.Fragment key={item.id}>
                   <div className='detail-info'>
-                    <div className="img-box">
+                    <div className="img-box text-center">
                     <Zoom>
                       <OverlayTrigger
                         placement="left"
