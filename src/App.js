@@ -76,7 +76,7 @@ function App() {
           <AuthProvider>
             <Router>
               <ScrollToTop />
-            <CustomNavbar exact path='/home/:id' size={cart.length} cart={cart} setCart={setCart} handleChange={handleChange} setIsBought={setIsBought} warning={warning} />
+            <CustomNavbar size={cart.length} cart={cart} setCart={setCart} handleChange={handleChange} setIsBought={setIsBought} />
             <Routes>
               <Route exact path='/home' element={<Home detailPage={detailPage} />} />
               <Route exact path='/' element={<Home detailPage={detailPage} />} />
@@ -84,19 +84,13 @@ function App() {
                                                         handleClick={handleClick} 
                                                         warning={warning} 
                                                         detailPage={detailPage} 
-                                                        detail={detail} 
-                                                        setActive={setActive} 
-                                                        press={press} 
-                                                        active={active}
                                                         showCongratulations={showCongratulations} />} />
               <Route exact path='/product' element={<ProductPage 
                                                     handleClick={handleClick} 
                                                     warning={warning} 
                                                     detailPage={detailPage} 
                                                     press={press} 
-                                                    detail={detail} 
-                                                    setPress={setPress} 
-                                                    setActive={setActive}
+                                                    detail={detail}
                                                     showCongratulations={showCongratulations} />} />
               <Route exact path='/bought' element={<Bought isBought={isBought} cart={cart} setCart={setCart} size={cart.length} />} />
               <Route exact path='/auth/register' element={<Register />} />

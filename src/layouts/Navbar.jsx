@@ -91,13 +91,13 @@ function CustomNavbar({size, cart, setCart, handleChange, setIsBought}) {
       dispatch({
         type: ActionTypes.LOGOUT_SUCCESS
       });
-      showAlert('You have successully logged out.');
+      showAlert('You have successfully logged out!');
       navigate('/auth/login');
     } else {
       dispatch({
         type: ActionTypes.LOGOUT_ERROR
       });
-      showAlert('Oops something went wront while logging you out, please try again.', 'danger');
+      showAlert('Oops! Something went wrong while trying to log you out. Please try again later.', 'danger');
     }
   };
 
@@ -121,8 +121,12 @@ function CustomNavbar({size, cart, setCart, handleChange, setIsBought}) {
     fetchUsername();
   }, [isAuthenticated]);
 
+  
+  
+
 
   return (
+    
     <Navbar className="bg-body-tertiary navbar" >
 
       <Container className='nav-container' fluid>
@@ -233,7 +237,6 @@ function CustomNavbar({size, cart, setCart, handleChange, setIsBought}) {
           
         </Offcanvas.Body>
       </Offcanvas>
-      {/* {showCongratulations && <div className='congratulation-div'>Thanks for the purchase! It's on the way!</div>} */}
     </Navbar>
     
   );

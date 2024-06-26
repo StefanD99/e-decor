@@ -1,6 +1,7 @@
 import { createContext, useReducer } from "react";
 import { Toast } from "react-bootstrap";
 import alertReducer from "./AlertReducer";
+import { useMediaQuery } from "react-responsive";
 
 const initState = {
     message: '',
@@ -12,6 +13,8 @@ const AlertContext = createContext(initState);
 
 export const AlertProvider = ({children}) => {
     const [state, dispatch] = useReducer(alertReducer, initState);
+
+    const isLaptop = useMediaQuery({ query: '(max-width: 1440px)' });
 
     const showAlert = (message, variant='success') => {
         dispatch({
@@ -26,6 +29,7 @@ export const AlertProvider = ({children}) => {
     return (
         <AlertContext.Provider value={{...state, showAlert}}>
             {children}
+            
             <Toast 
                 onClose={() => dispatch({type: 'HIDE_ALERT'})} 
                 show={state.isAlert} 
@@ -35,7 +39,7 @@ export const AlertProvider = ({children}) => {
                 style={{
                     position: 'fixed',
                     top: 120,
-                    left: '80%',
+                    right: '0',
                     textAlign: 'center',
                     fontFamily: 'Verdana',
                     fontWeight: 'bold'

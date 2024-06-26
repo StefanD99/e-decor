@@ -10,6 +10,7 @@ import AlertContext from "../context/alertContext/AlertContext";
 function Login() {
 
     const {dispatch} = useContext(AuthContext);
+    const [showCongratulations, setShowCongratulations] = useState(false);
     const {showAlert} = useContext(AlertContext);
     const [values, setValues] = useState({
         email: '',
@@ -47,13 +48,13 @@ function Login() {
             dispatch({
                 type: ActionTypes.LOGIN_SUCCESS,
                 payload: result.user
-            });
+            }); 
             setValues({
                 email: '',
                 password: '',
                 error: ''
             });
-            showAlert('You have successfully logged in.');
+            showAlert('You have successfully logged in!');
             navigate('/home');
         } else {
             dispatch({
@@ -95,6 +96,9 @@ function Login() {
                 </Form>
                 </Col>
             </Row>
+            {
+                showCongratulations && <div className='congratulation-div'>You have successfully logged in</div>
+            }
         </Container>
     )
 };
