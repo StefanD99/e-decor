@@ -15,9 +15,11 @@ import ActionTypes from '../context/authContext/authActionTypes';
 import AlertContext from '../context/alertContext/AlertContext';
 import { auth, db } from '../fbConfig';
 import { doc, getDoc } from 'firebase/firestore';
+import MainContext from '../context/MainContext';
 
-function CustomNavbar({size, cart, setCart, handleChange, setIsBought}) {
+function CustomNavbar() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const {cart, setCart, handleChange, setIsBought} = useContext(MainContext);
 
   const {dispatch, isAuthenticated} = useContext(AuthContext);
   const [showCongratulations, setShowCongratulations] = useState(false);
@@ -121,12 +123,9 @@ function CustomNavbar({size, cart, setCart, handleChange, setIsBought}) {
     fetchUsername();
   }, [isAuthenticated]);
 
-  
-  
-
+  let size = cart.length;
 
   return (
-    
     <Navbar className="bg-body-tertiary navbar" >
 
       <Container className='nav-container' fluid>

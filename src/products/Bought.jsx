@@ -1,10 +1,11 @@
 import {Col, Container, Row } from "react-bootstrap";
 import "./bought.css";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import MainContext from "../context/MainContext";
 
-function Bought({isBought, cart, setCart, size}) {
+function Bought() {
     const [price, setPrice] = useState(0);
-
+    const {isBought, cart, setCart} = useContext(MainContext);
 
     const handlePrice = () => {
         let ans = 0;
@@ -21,6 +22,8 @@ function Bought({isBought, cart, setCart, size}) {
       const handleBuy = () => {
         setCart([]);
       };
+
+      let size = cart.length;
 
     return (
         <>
@@ -53,14 +56,14 @@ function Bought({isBought, cart, setCart, size}) {
                         </Col>
                     </Row>
                     <div className='total' >
-                        <span>Subtotal({size} {size === 1 ? 'item' : 'items'}) </span>
-                        <span>{price.toFixed(2)}$ </span>
+                        <span>Subtotal({size} {size === 1 ? 'item' : 'items'})</span>
+                        <span>{price.toFixed(2)}$</span>
                         <button onClick={handleBuy}>Buy</button>
                     </div>
                 </Container>
             : 
             <div className="text-div">
-                <h1 className={!isBought ? 'text-danger' : 'text-success'}>{!isBought ? 'Ooops! Something went wrong. Please go back and buy some product/s first!' : `Thanks for the purchase! Your product will arrive at your address shortly!`}</h1>
+                <h1 className={!isBought ? 'text-danger' : 'text-success'}>{!isBought ? 'Ooops! Something went wrong. Please go back and buy some product/s first!' : 'Thanks for the purchase! Your product will arrive at your address shortly!'}</h1>
             </div>
         }
         </>

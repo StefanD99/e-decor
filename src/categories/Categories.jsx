@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import './categories.css';
 import CategoriesFilter from "./CategoriesFilter";
 import ProductCard from "../products/ProductCard";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { productData } from "../products/dataProduct";
+import MainContext from "../context/MainContext";
 
 
-function Categories({handleClick, warning, detailPage, showCongratulations}) {
+function Categories() {
 
     const [filteredItems, setFilteredItems] = useState(productData);
+    const {handleClick, warning, detailPage, showCongratulations} = useContext(MainContext);
 
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>

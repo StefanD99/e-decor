@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./productPage.css";
 import CustomCarousel from "../shared/Carousel";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import MainContext from "../context/MainContext";
 
 
-function ProductPage({handleClick, warning, press, detail, detailPage, showCongratulations}) {
+function ProductPage() {
+
+    const {handleClick, warning, press, detail, detailPage, showCongratulations} = useContext(MainContext);
 
     const renderTooltip = (props) => (
       <Tooltip id="button-tooltip" {...props}>

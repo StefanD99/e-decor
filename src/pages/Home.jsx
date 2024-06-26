@@ -11,9 +11,12 @@ import HomeImage6 from '../assets/Home_6.png';
 import HomeImage7 from '../assets/Home_7.png';
 import CustomCarousel from "../shared/Carousel";
 import { useMediaQuery } from "react-responsive";
+import { useContext } from "react";
+import MainContext from "../context/MainContext";
 
-function Home({detailPage}) {
+function Home() {
 
+    const {detailPage} = useContext(MainContext);
     const navigate = useNavigate();
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 

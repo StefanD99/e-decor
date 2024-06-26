@@ -127,26 +127,6 @@
     }
   }
 
-  /* @media screen and (max-width: 990px) {
-    .detail-container .detail-content .detail-info .img-box img {
-      width: 250px;
-      height: 250px;
-    }
-    .smaller-image {
-      width: 73px !important;
-      height: 73px !important;
-    }
-    .detail-container .detail-content .detail-info .product-detail button {
-      font-size: 15px;
-      width: 50%;
-      margin: 0;
-      padding: 5px;
-    }
-    .detail-container .detail-content .detail-info .product-detail .des {
-      font-size: 13px;
-    }
-  } */
-
   @media screen and (max-width: 990px) {
     .detail-container .detail-content .detail-info {
       display: block;
